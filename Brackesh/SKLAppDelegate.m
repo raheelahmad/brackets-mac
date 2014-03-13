@@ -7,12 +7,25 @@
 //
 
 #import "SKLAppDelegate.h"
+#import "NSString+Brackets.h"
+
+@interface SKLAppDelegate ()<NSTextFieldDelegate>
+
+@property (weak) IBOutlet NSTextField *textField;
+@property (weak) IBOutlet NSTextField *label;
+
+@end
 
 @implementation SKLAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-	// Insert code here to initialize your application
+- (void)controlTextDidChange:(NSNotification *)obj {
+	NSString *text = self.textField.stringValue;
+	if (text.length) {
+		BOOL matches = [text hasMatchingBrackets];
+		self.label.stringValue = matches ? @"Match" : @"Nope";
+	} else {
+		self.label.stringValue = @"";
+	}
 }
 
 @end
