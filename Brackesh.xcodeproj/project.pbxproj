@@ -18,6 +18,7 @@
 		594EB60918D26AED00A5C048 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594EB5E818D26AED00A5C048 /* Cocoa.framework */; };
 		594EB61118D26AED00A5C048 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 594EB60F18D26AED00A5C048 /* InfoPlist.strings */; };
 		594EB61318D26AED00A5C048 /* BrackeshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 594EB61218D26AED00A5C048 /* BrackeshTests.m */; };
+		594EB62118D26BE500A5C048 /* NSString+Brackets.m in Sources */ = {isa = PBXBuildFile; fileRef = 594EB62018D26BE500A5C048 /* NSString+Brackets.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		594EB60E18D26AED00A5C048 /* BrackeshTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrackeshTests-Info.plist"; sourceTree = "<group>"; };
 		594EB61018D26AED00A5C048 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		594EB61218D26AED00A5C048 /* BrackeshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrackeshTests.m; sourceTree = "<group>"; };
+		594EB61F18D26BE500A5C048 /* NSString+Brackets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Brackets.h"; sourceTree = "<group>"; };
+		594EB62018D26BE500A5C048 /* NSString+Brackets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Brackets.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				594EB5FD18D26AED00A5C048 /* MainMenu.xib */,
 				594EB60018D26AED00A5C048 /* Images.xcassets */,
 				594EB5EF18D26AED00A5C048 /* Supporting Files */,
+				594EB61F18D26BE500A5C048 /* NSString+Brackets.h */,
+				594EB62018D26BE500A5C048 /* NSString+Brackets.m */,
 			);
 			path = Brackesh;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594EB62118D26BE500A5C048 /* NSString+Brackets.m in Sources */,
 				594EB5F518D26AED00A5C048 /* main.m in Sources */,
 				594EB5FC18D26AED00A5C048 /* SKLAppDelegate.m in Sources */,
 			);
@@ -465,6 +471,7 @@
 				594EB61818D26AED00A5C048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		594EB61918D26AED00A5C048 /* Build configuration list for PBXNativeTarget "BrackeshTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +480,7 @@
 				594EB61B18D26AED00A5C048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
