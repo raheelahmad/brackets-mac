@@ -30,7 +30,7 @@
 		XCTAssertTrue(test, @"Simple containters should have macthing brackets");
 	}
 	
-	for (NSString *sample in @[ @"{Tha[le)s}", @"[Fa[ra){b}i", @"(Mai(mo)n[edes" ]) {
+	for (NSString *sample in @[ @"{Tha[le)s}]", @"[Fa[ra){b}i", @"(Mai(mo)n)[ed]]es" ]) {
 		BOOL test = [sample hasMatchingBrackets];
 		XCTAssertFalse(test, @"Simple non-ending containters should have macthing brackets");
 	}

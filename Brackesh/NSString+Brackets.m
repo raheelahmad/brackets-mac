@@ -36,12 +36,19 @@
 			NSString *top = [stack lastObject];
 			[stack removeLastObject];
 			
-			// Assume top was a matching starter
-			NSInteger indexOfStarter = [[self starters] indexOfObject:top];
-			NSString *correctMatcher = [[self enders] objectAtIndex:indexOfStarter];
-			
-			if (![correctMatcher isEqualToString:character]) {
+			if (!top) {
+				// need an starter for our ender
 				isMatch = NO;
+			}
+			
+			// Assume top was a matching starter
+			if ([[self starters] containsObject:top]) {
+				NSInteger indexOfStarter = [[self starters] indexOfObject:top];
+				NSString *correctMatcher = [[self enders] objectAtIndex:indexOfStarter];
+				
+				if (![correctMatcher isEqualToString:character]) {
+					isMatch = NO;
+				}
 			}
 		}
 		
