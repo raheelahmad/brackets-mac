@@ -646,8 +646,8 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Brackesh" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window title="Brackesh" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="documentWindow" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="479" height="110"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
@@ -658,41 +658,28 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SNJ-Ka-1v6">
-                        <rect key="frame" x="20" y="44" width="349" height="46"/>
+                        <rect key="frame" x="20" y="32" width="349" height="46"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" alignment="center" placeholderString="" drawsBackground="YES" id="PTe-M7-Sxa">
-                            <font key="font" size="30" name="Helvetica"/>
-                            <color key="textColor" white="0.22769657258064516" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="" drawsBackground="YES" id="PTe-M7-Sxa">
+                            <font key="font" metaFont="system" size="30"/>
+                            <color key="textColor" white="0.16944934475806453" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
                             <outlet property="delegate" destination="494" id="K2D-Yg-hKj"/>
                         </connections>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feq-jN-pdt">
-                        <rect key="frame" x="388" y="44" width="74" height="21"/>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfo-UE-NDn">
+                        <rect key="frame" x="417" y="34" width="42" height="42"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="dMI-I7-BrG">
-                            <font key="font" size="17" name="Helvetica-Bold"/>
-                            <color key="textColor" white="0.27554813508064518" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nl7-62-Sbf">
-                        <rect key="frame" x="20" y="19" width="37" height="17"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="C6F-5c-6AS"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2JA-ha-kxp">
+                        <rect key="frame" x="18" y="7" width="86" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Input" id="Kl8-eF-H8i">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6N6-Id-8IF">
-                        <rect key="frame" x="388" y="21" width="43" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Result" id="tpG-YL-HK4">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="..." id="bhi-Jy-5Wn">
+                            <font key="font" size="11" name="LucidaGrande"/>
+                            <color key="textColor" red="0.80000007149999997" green="0.80000007149999997" blue="0.80000007149999997" alpha="1" colorSpace="deviceRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -701,7 +688,8 @@
         </window>
         <customObject id="494" customClass="SKLAppDelegate">
             <connections>
-                <outlet property="label" destination="feq-jN-pdt" id="EmG-MS-q5v"/>
+                <outlet property="imageView" destination="cfo-UE-NDn" id="2h6-xp-Fwf"/>
+                <outlet property="label" destination="2JA-ha-kxp" id="hZH-HA-uiH"/>
                 <outlet property="textField" destination="SNJ-Ka-1v6" id="MWq-Wl-paq"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>

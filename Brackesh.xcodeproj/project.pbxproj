@@ -207,6 +207,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Sakun Labs";
 				TargetAttributes = {
+					594EB5E418D26AED00A5C048 = {
+						DevelopmentTeam = 2W72Q4758S;
+					};
 					594EB60518D26AED00A5C048 = {
 						TestTargetID = 594EB5E418D26AED00A5C048;
 					};
