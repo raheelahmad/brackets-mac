@@ -8,6 +8,7 @@
 
 #import "SKLAppDelegate.h"
 #import "NSString+Brackets.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SKLAppDelegate ()<NSTextFieldDelegate>
 
@@ -22,12 +23,13 @@
 
 - (void)controlTextDidChange:(NSNotification *)obj {
 	NSString *text = self.textField.stringValue;
+    NSImage *image;
 	if (text.length) {
 		BOOL matches = [text hasMatchingBrackets];
-		self.imageView.image = matches ? [NSImage imageNamed:@"aye"] : [NSImage imageNamed:@"nay"];
+		image = matches ? [NSImage imageNamed:@"aye"] : [NSImage imageNamed:@"nay"];
 		self.label.stringValue = matches ? @"Matches" : @"Not Balanced";
 	} else {
-		self.imageView.image = nil;
+		image = nil;
 		self.label.stringValue = @"Empty";
 		self.resets++;
 		
@@ -35,6 +37,17 @@
 			self.label.stringValue = NSLocalizedString(@"Where is my money, Drew?", nil);
 		}
 	}
+    
+    if (![self.imageView.image isEqual:image]) {
+        CAKeyframeAnimation *fadeAnim = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+        fadeAnim.values = @[ @0.0, @1.0 ];
+        fadeAnim.keyTimes = @[ @0.5, @1.0 ];
+        [self.imageView.layer addAnimation:fadeAnim forKey:@"opacity"];
+        
+        // Change the actual data value in the layer to the final value.
+        self.imageView.layer.opacity = 1.0;
+    }
+    self.imageView.image = image;
 }
 
 - (void)awakeFromNib {
