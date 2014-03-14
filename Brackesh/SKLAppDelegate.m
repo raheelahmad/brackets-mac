@@ -14,6 +14,7 @@
 @property (weak) IBOutlet NSTextField *textField;
 @property (weak) IBOutlet NSTextField *label;
 @property (weak) IBOutlet NSImageView *imageView;
+@property  NSInteger resets;
 
 @end
 
@@ -28,6 +29,11 @@
 	} else {
 		self.imageView.image = nil;
 		self.label.stringValue = @"Empty";
+		self.resets++;
+		
+		if (self.resets % 3 == 0) {
+			self.label.stringValue = NSLocalizedString(@"Where is my money, Drew?", nil);
+		}
 	}
 }
 

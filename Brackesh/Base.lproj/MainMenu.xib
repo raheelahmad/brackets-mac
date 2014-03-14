@@ -675,11 +675,11 @@
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="C6F-5c-6AS"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2JA-ha-kxp">
-                        <rect key="frame" x="18" y="7" width="86" height="17"/>
+                        <rect key="frame" x="18" y="7" width="208" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="..." id="bhi-Jy-5Wn">
                             <font key="font" size="11" name="LucidaGrande"/>
-                            <color key="textColor" red="0.80000007149999997" green="0.80000007149999997" blue="0.80000007149999997" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="textColor" red="0.64151664402173914" green="0.64151664402173914" blue="0.64151664402173914" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
